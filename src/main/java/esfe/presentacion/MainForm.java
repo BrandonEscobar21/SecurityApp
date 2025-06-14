@@ -64,5 +64,12 @@ public class MainForm extends JFrame {
             userReadingForm.setVisible(true); // Hace visible el formulario de lectura de usuarios.
         });
 
+        JMenuItem itemIdiomas = new JMenuItem("Idiomas"); // Crea un nuevo elemento de menú llamado "Idiomas".
+        menuMantenimiento.add(itemIdiomas); // Agrega el elemento "Idiomas" al menú "Mantenimientos".
+        itemIdiomas.addActionListener(e -> { // Agrega un ActionListener al elemento "Idiomas".
+            IdiomaReadingForm idiomaReadingForm=new IdiomaReadingForm(this); // Cuando se hace clic, crea una nueva instancia de IdiomaReadingForm (formulario para leer/listar idiomas), pasándole la instancia actual de MainForm como padre.
+            idiomaReadingForm.setVisible(true); // Hace visible el formulario de lectura de idiomas.
+        });
+
     }
 }
